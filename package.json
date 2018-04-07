@@ -1,0 +1,50 @@
+{
+  "name": "instant-bot",
+  "version": "0.0.0",
+  "description": "Instant Telegram bot",
+  "license": "MIT",
+  "main": "lib/instant_bot",
+  "bin": {
+    "instant_bot": "bin/instant_bot.js"
+  },
+  "files": [
+    "lib",
+    "bin"
+  ],
+  "scripts": {
+    "test": "npm run test-node && npm run lint",
+    "test-node": "mocha",
+    "lint": "eslint lib/*.js bin/*.js test/*.js"
+  },
+  "keywords": [
+    "telegram",
+    "bot",
+    "framework",
+    "easy"
+  ],
+  "homepage": "https://github.com/michurin/instant-bot",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": ">=4.19"
+  },
+  "engines" : {
+    "node" : ">=8"
+  },
+  "author": {
+    "name": "Alexey Michurin",
+    "email": "a.michurin@gmail.com",
+    "url": "http://michurin.github.io/"
+  },
+  "contributors": [{
+    "name": "Alexey Michurin",
+    "email": "a.michurin@gmail.com",
+    "url": "http://michurin.github.io/"
+  }],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/michurin/instant-bot.git"
+  },
+  "bugs": {
+    "email": "a.michurin@gmail.com"
+  }
+}

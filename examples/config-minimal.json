@@ -1,0 +1,12 @@
+{
+    "token": "0xxxxxxxx:Axx[ PUT YOUR TOKEN HERE ]xxxxxx", 
+    "pass_env": [],
+    "force_env": {},
+    "script": "./demo-slave.sh",
+    "polling_timeout": 30,
+    "whilelist": [],
+    "debug": true,
+
+    "http_port": 8998,
+    "http_host": "localhost"
+}
