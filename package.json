@@ -28,8 +28,25 @@
     "eslint": ">=4.19",
     "mocha": ">=5"
   },
-  "engines" : {
-    "node" : ">=8"
+  "engines": {
+    "node": ">=8"
+  },
+  "eslintConfig": {
+    "env": {
+      "es6": true,
+      "node": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+      "sourceType": "module",
+      "ecmaVersion": 2017
+    },
+    "rules": {
+      "indent": ["error", 4],
+      "linebreak-style": ["error", "unix"],
+      "quotes": ["error", "single"],
+      "semi": ["error", "always"]
+    }
   },
   "author": {
     "name": "Alexey Michurin",
