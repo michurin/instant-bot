@@ -3,6 +3,15 @@ instant-bot
 
 Telegram bot allows you to write bot logic as simple as GCI-script, using any programming language.
 
+Requirements
+------------
+
+- [Node.js](https://nodejs.org/) >=8 (without any aditional modules)
+
+To run examples on this page you may need to install
+[ImageMagick](https://www.imagemagick.org/)
+and some tools like `at` (run `atd`), `curl` etc.
+
 How to run
 ----------
 
@@ -10,7 +19,7 @@ How to run
 
 First of all you have to [create](https://core.telegram.org/bots#3-how-do-i-create-a-bot) your Telegram bot.
 
-Now you authorization **token**.
+Now you have authorization **token**.
 
 ### Step 1: first breth (run without installation)
 
@@ -238,6 +247,17 @@ npm install -g instant-bot-VERSION.tgz
 ```
 
 Now the command `instant_bot` have to be available.
+
+More examples
+-------------
+
+You can find more examples in
+[examples/](https://github.com/michurin/instant-bot/tree/master/examples).
+
+In the same place you can find some code snippets,
+how to run the bot in daemon mode. It is not ready
+for production, but you can use it in your own `systemd` or
+`rc.d` startup scripts.
 
 ### Enjoy!
 

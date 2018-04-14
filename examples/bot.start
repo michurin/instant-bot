@@ -1,0 +1,39 @@
+#!/bin/sh
+
+# good idea to use `su' and `cd'
+
+TG_BOT_CONFIG="$HOME/vds/site/system/instant-bot-run/bot.config.json"
+NODE_BIN="$HOME/lib/node-v8.9.4-linux-x86/bin/node"
+SCRIPT_BIN="$HOME/instant-bot/bin/instant_bot.js"
+PID_FILE=var.bot.pid
+
+
+if test -t 1
+then
+
+    if test -e "$PID_FILE"
+    then
+       if kill -0 "$(cat "$PID_FILE")" >/dev/null 2>&1
+       then
+           echo "ERROR: You have to stop process $(cat "$PID_FILE") [$PID_FILE] first"
+           exit 1
+       fi
+    fi
+
+    nohup "$0" >log.bot."$(date +%Y-%m-%d-%H-%M-%S)".nohup.log 2>log.bot."$(date +%Y-%m-%d-%H-%M-%S)".nohup.err &
+    echo "$!" >"$PID_FILE"
+
+else
+
+    echo 'Start under nohup'
+
+    export TG_BOT_CONFIG
+    while :
+    do
+       LOG_FILE="$(date +log.bot.%Y-%m-%d-%H-%M-%S.log)"
+       ERR_FILE="$(date +log.bot.%Y-%m-%d-%H-%M-%S.err)"
+       "$NODE_BIN" "$SCRIPT_BIN" >"$LOG_FILE" 2>"$ERR_FILE"
+       sleep 300
+    done
+
+fi
