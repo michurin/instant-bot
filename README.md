@@ -259,8 +259,9 @@ how to run the bot in daemon mode. It is not ready
 for production, but you can use it in your own `systemd` or
 `rc.d` startup scripts.
 
-### Enjoy!
+Enjoy!
+------
 
-You can contact me via e-main: a.michurin@gmail.com
+You can contact me via e-mail: a.michurin@gmail.com
 
 --Alexey
