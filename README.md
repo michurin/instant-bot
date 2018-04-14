@@ -37,7 +37,7 @@ Create configuration file and script with scenario. Simplest examples:
 ```
 
 Run bot:
-```
+```sh
 TG_BOT_CONFIG=config-minimal.json node bin/instant_bot.js
 ```
 
@@ -88,7 +88,7 @@ Now you bot can reply only one phrase.
 
 You can implement some commands. Rewrite your `demo-slave.sh` like this:
 
-```
+```sh
 #!/bin/sh
 
 CMD="$(echo "$1" | tr '[:upper:]' '[:lower:]')"  # make commands case insensitive
@@ -137,13 +137,13 @@ Bot can recognize PNG, JPEG and GIF.
 
 If you have not ImageMagick, you can change line
 
-```
+```sh
         convert rose: png:-
 ```
 
 to somewhat like this:
 
-```
+```sh
         cat /path/to/you/favorite/image.png
 ```
 
@@ -161,7 +161,7 @@ stdout: dot char (.) and optional space chars.
 Play with options `pass_env` and `force_env` in your configuration file. You
 can start from something like this
 
-```
+```javascript
      "pass_env": ["HOME", "PATH", "USER"],
      "force_env": {"LC_ALL": "C"},
 ```
@@ -180,7 +180,7 @@ something like that? Fortunately yes!
 
 To let magic going on, add to you config two new options:
 
-```
+```javascript
     "http_port": 8999,
     "http_host": "localhost",
 ```
@@ -204,7 +204,7 @@ TG_USER_NAME=AlexeyMichurin
 As you can see, our chat id is 153812628. Let use it.
 Try to send you first asyncronius message by colling this serfer via HTTP:
 
-```
+```sh
 curl -X POST --data-binary 'It is async message!' http://localhost:8999/?chat_id=153812628
 ```
 
@@ -217,7 +217,7 @@ two basic cases of asynchronous:
 
 Solution can seems like this:
 
-```
+```sh
     delayed)
         echo "curl -X POST --data-binary 'Delayed task is done' 'http://$TG_HTTP_HOST:$TG_HTTP_PORT/?chat_id=$TG_CHAT_ID'" | at -M now + 1minute 2>/dev/null
         echo 'Task scheduled... wait one minute...'
@@ -235,13 +235,13 @@ Your periodic task have to look to mentioned storage and send messages to all su
 
 So far, we runs the bot simply from source code:
 
-```
+```sh
 TG_BOT_CONFIG=config-minimal.json node bin/instant_bot.js
 ```
 
 But you can to build and install package globally into your system:
 
-```
+```sh
 npm pack
 npm install -g instant-bot-VERSION.tgz
 ```
