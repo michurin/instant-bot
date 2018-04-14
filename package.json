@@ -25,7 +25,8 @@
   "homepage": "https://github.com/michurin/instant-bot",
   "dependencies": {},
   "devDependencies": {
-    "eslint": ">=4.19"
+    "eslint": ">=4.19",
+    "mocha": ">=5"
   },
   "engines" : {
     "node" : ">=8"
