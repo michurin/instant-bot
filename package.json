@@ -1,6 +1,6 @@
 {
   "name": "instant-bot",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Instant Telegram bot",
   "license": "MIT",
   "main": "lib/instant_bot",
@@ -42,10 +42,22 @@
       "ecmaVersion": 2017
     },
     "rules": {
-      "indent": ["error", 4],
-      "linebreak-style": ["error", "unix"],
-      "quotes": ["error", "single"],
-      "semi": ["error", "always"]
+      "indent": [
+        "error",
+        4
+      ],
+      "linebreak-style": [
+        "error",
+        "unix"
+      ],
+      "quotes": [
+        "error",
+        "single"
+      ],
+      "semi": [
+        "error",
+        "always"
+      ]
     }
   },
   "author": {
@@ -53,11 +65,13 @@
     "email": "a.michurin@gmail.com",
     "url": "http://michurin.github.io/"
   },
-  "contributors": [{
-    "name": "Alexey Michurin",
-    "email": "a.michurin@gmail.com",
-    "url": "http://michurin.github.io/"
-  }],
+  "contributors": [
+    {
+      "name": "Alexey Michurin",
+      "email": "a.michurin@gmail.com",
+      "url": "http://michurin.github.io/"
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/michurin/instant-bot.git"
