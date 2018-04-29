@@ -1,15 +1,13 @@
 /* global it, describe */
 
-
 'use strict';
-
 
 const assert = require('assert');
 const pack_multipart = require('../lib/pack_multipart').pack_multipart;
 
 
-describe('Multipart message test', function() {
-    it('bounds', function() {
+describe('Multipart message test', () => {
+    it('bounds', () => {
         const [data, bound] = pack_multipart({
             a: new Buffer('A'),
             b: new Buffer('B'),
@@ -21,7 +19,7 @@ describe('Multipart message test', function() {
         assert.equal(lines[8], '--' + bound + '--');
         assert.equal(lines[9], '');
     });
-    it('default mime type', function() {
+    it('default mime type', () => {
         const [data, bound] = pack_multipart({  // eslint-disable-line no-unused-vars
             a: new Buffer('A'),
         });
@@ -31,7 +29,7 @@ describe('Multipart message test', function() {
         assert.equal(lines[2], '');
         assert.equal(lines[3], 'A');
     });
-    it('Photo mime type', function() {
+    it('Photo mime type', () => {
         const [data, bound] = pack_multipart({  // eslint-disable-line no-unused-vars
             photo: {
                 data: new Buffer('A'),
