@@ -12,6 +12,11 @@ To run examples on this page you may need to install
 [ImageMagick](https://www.imagemagick.org/)
 and some tools like `at` (run `atd`), `curl` etc.
 
+The bot uses [long polling](https://en.wikipedia.org/wiki/Push_technology#Long_polling).
+In particular, it means you have not to have open external ports or setup HTTPS.
+You can just run script and enjoy.
+Of course, the bot need to have access to `https://api.telegram.org/`.
+
 How to run
 ----------
 
