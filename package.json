@@ -1,6 +1,6 @@
 {
   "name": "instant-bot",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Instant Telegram bot",
   "license": "MIT",
   "main": "lib/instant_bot",
