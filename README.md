@@ -87,7 +87,7 @@ Simplest `demo-slave.sh` can seems like this:
 echo "I'm OK!"
 ```
 
-Now you bot can reply only one phrase.
+Now your bot can reply only one phrase.
 
 #### Script with commands
 
@@ -207,7 +207,7 @@ TG_USER_NAME=AlexeyMichurin
 ```
 
 As you can see, our chat id is 153812628. Let use it.
-Try to send you first asyncronius message by colling this serfer via HTTP:
+Try to send your first asyncronius message by calling this server via HTTP:
 
 ```sh
 curl -X POST --data-binary 'It is async message!' http://localhost:8999/?chat_id=153812628
